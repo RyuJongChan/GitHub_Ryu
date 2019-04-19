@@ -11,7 +11,7 @@ Shield::~Shield()
 
 void Shield::init()
 {
-	DDS_IMAGE image;
+	DDS_IMAGE image;	
 
 	readDDS("asset/Shield/Shield1.dds", &image); addAniSprite(image);
 	readDDS("asset/Shield/Shield2.dds", &image); addAniSprite(image);
@@ -21,7 +21,7 @@ void Shield::init()
 	readDDS("asset/Shield/Shield6.dds", &image); addAniSprite(image);
 	readDDS("asset/Shield/Shield7.dds", &image); addAniSprite(image);
 	readDDS("asset/Shield/Shield8.dds", &image); addAniSprite(image);
-	
+
 	addCollider(new Collider_Circle(5, 10, 70, "shield", 0));
 }
 

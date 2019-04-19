@@ -21,11 +21,11 @@ void Exp_Enemy::init()
 		{
 			DDS_IMAGE image;
 
-			readDDSRect("asset/Expenemy.dds", j * 128, i * 128, 128, 128, &image);
+			readDDSRect("asset/expenemy.dds", j * 128, i * 128, 128, 128, &image);
 			addAniSprite(image);
 		}
 	}
-	
+
 	lifeTime = 1;  
 }
 

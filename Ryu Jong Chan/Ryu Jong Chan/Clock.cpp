@@ -14,12 +14,10 @@ Clock::~Clock()
 
 void Clock::init()
 {
-	//아이콘 추가
-	addChildObject(new TimeIcon(0, 0), 2);  //레이어 번호는 2 
-
-	//시간 레이블 추가
+	addChildObject(new TimeIcon(0, 0), 2); 
+	
 	label = new Label("00:00", "asset/godoMaum.ttf", 48, 0xffffff, 70, 10, 3);
-	addChildObject(label, 2);               //레이어 번호는 2
+	addChildObject(label, 2);              
 }
 
 void Clock::update()

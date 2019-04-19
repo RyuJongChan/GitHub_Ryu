@@ -6,23 +6,19 @@
 
 Label::Label(const char * txt, const char * ttf, int fontSize, unsigned int fontColor, float px, float py, int tag)
 	:GameObject("label", tag, px, py)
-{
-	//폰트 라이브러리 초기화
+{	
 	if (FT_Init_FreeType(&library) != 0)
 	{
-		printf("프리타입 폰트라이브러리 초기화 실패\n");
+		printf("FreeType Fontlib init failed\n");
 	}
-
-	//폰트 파일로드(face읽기)
+	
 	if (FT_New_Face(library, ttf, 0, &face) != 0)
 	{
-		printf("ttf 파일 읽어오기 실패 \n");
+		printf("ttf file load failed\n");
 	}
-
-	//폰트 크기 설정
+	
 	FT_Set_Pixel_Sizes(face, fontSize, fontSize);
 
-	//전달된 값 저장
 	this->fontSize  = fontSize;
 	this->fontColor = fontColor;
 	

@@ -70,7 +70,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\user\source\repos\Ryu Jong Chan\Ryu Jong Chan\font;$(IncludePath)</IncludePath>
+    <IncludePath>C:\GitHub_Ryu\Ryu Jong Chan\Ryu Jong Chan\font;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -2,14 +2,14 @@
 #include "timer.h"
 #include "input.h"
 
-RectE::RectE(float px, float py, float width, float height)	: Collider_AABB(px, py, width, height, "적기", 1)
+RectE::RectE(float px, float py, float width, float height)	: Collider_AABB(px, py, width, height, "enemy", 1)
 {
 }
 RectE::~RectE()
 {
 }
 
-RectP::RectP(float px, float py, float width, float height)	: Collider_AABB(px, py, width, height, "플레이어", 1)
+RectP::RectP(float px, float py, float width, float height)	: Collider_AABB(px, py, width, height, "player", 1)
 {
 }
 RectP::~RectP()
@@ -48,7 +48,7 @@ void RectP::update()
 }
 
 //원 적기
-CircleE::CircleE(float px, float py, float r) : Collider_Circle(px, py, r, "적기", 1)
+CircleE::CircleE(float px, float py, float r) : Collider_Circle(px, py, r, "enemy", 1)
 {
 }
 CircleE::~CircleE()
@@ -57,7 +57,7 @@ CircleE::~CircleE()
 }
 
 //원 플레이어
-CircleP::CircleP(float px, float py, float r) : Collider_Circle(px, py, r, "플레이어", 0)
+CircleP::CircleP(float px, float py, float r) : Collider_Circle(px, py, r, "player", 0)
 {
 }
 CircleP::~CircleP()

@@ -18,6 +18,8 @@ Enemy::~Enemy()
 
 void Enemy::init()
 {
+	enemybodyDamage = 50.0f;
+
 	readDDS("asset/Enemy1.dds", &sprite);
 
 	speedH = 100;
@@ -52,7 +54,7 @@ void Enemy::OnCollision(GameObject * other, Collider * otherCol, Collider * myCo
 {
 	if (strcmp(other->getName(), "player") == 0)
 	{		
-		other->DoDamage(this, 50);
+		other->DoDamage(this, enemybodyDamage);
 	}
 }
 
@@ -62,7 +64,7 @@ void Enemy::DoDamage(GameObject * fromObj, float d)
 
 	if (hp <= 0)
 	{
-		//적기 폭발
+		//적기 폭발 및 삭제
 		float x = px;
 		float y = py;
 		ObjectPool::addGameObject(new Exp_Enemy(x, y));
@@ -78,7 +80,7 @@ void Enemy::moveHor()
 	
 	float d = dt * speedH;
 
-	//좌로이동
+	//좌로 이동
 	if (px > Temppx + 100 || !isRight) 
 	{
 		isRight = false;
@@ -88,7 +90,7 @@ void Enemy::moveHor()
 		}
 	}
 
-	//우로이동
+	//우로 이동
 	if (px < Temppx - 100 || isRight)	
 	{
 		isRight = true;

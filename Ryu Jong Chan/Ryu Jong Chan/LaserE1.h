@@ -6,6 +6,7 @@ class LaserE1 : public GameObject
 {
 private:
 	float speed;
+	float laserEDamage;
 
 public:
 	LaserE1(float px, float py);

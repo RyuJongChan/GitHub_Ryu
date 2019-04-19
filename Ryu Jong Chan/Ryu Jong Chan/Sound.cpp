@@ -6,11 +6,11 @@ FMOD_SYSTEM  * Sound::system = NULL;
 
 Sound::Sound(const char * filename, bool loop):GameObject("sound",-1,0,0)
 {	
-    if (loop == true)   //반복재생
+    if (loop == true)   
     {
         if (FMOD_System_CreateSound(system, filename, FMOD_LOOP_NORMAL, NULL, &sound) != FMOD_OK)
         {
-            printf("Fmod 사운드 생성 실패\n");
+            printf("Fmod Sound create failed\n");
         }
     }
 
@@ -18,7 +18,7 @@ Sound::Sound(const char * filename, bool loop):GameObject("sound",-1,0,0)
 	{  
         if (FMOD_System_CreateSound(system, filename, FMOD_DEFAULT, NULL, &sound) != FMOD_OK)
         {
-            printf("Fmod 사운드 생성 실패\n");
+            printf("Fmod Sound create failed\n");
         }
     }
       
@@ -35,12 +35,12 @@ void Sound::init()
 {
     if (FMOD_System_Create(&system) != FMOD_OK)
     {
-        printf("Fmod 시스템 생성 에러\n");
+        printf("Fmod System create error\n");
     }
 
     if (FMOD_System_Init(system, 64 , FMOD_INIT_NORMAL, NULL) != FMOD_OK)
     {
-        printf("Fmod 사운드 초기화 실패\n");
+        printf("Fmod Sound init failed\n");
     }
 }
 

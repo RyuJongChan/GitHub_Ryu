@@ -25,6 +25,6 @@ void Collider_Circle::draw()
 	float cx = px + r;  //원의 x-축 중심위치
 	float cy = py + r;  //원의 y-축 중심위치
 
-	//개발환경에서 보이게//
+	////개발환경에서 보이게//
 	//drawCircle(cx, cy, r, 255, 255, 255);
 }

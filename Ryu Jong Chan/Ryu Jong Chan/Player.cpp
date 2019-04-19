@@ -26,10 +26,10 @@ Player::~Player()
 void Player::init()
 {	
 	readDDS("asset/Player.dds", &sprite);
-	speed = 300;
+	speed = 300.0f;
 	ShieldState = true;
 	
-	fireRate = (float)0.2;   
+	fireRate = 0.2f;   
 	fireTime = 0;     
 	
 	addChildObject(new Jet(45, 70));
@@ -41,6 +41,7 @@ void Player::init()
 	shieldLifeTime = 5;             	
 	
 	hp = 100;
+	playerbodyDamage = 100.0f;
 	only = 1;	
 	state = 0;
 	
@@ -156,7 +157,7 @@ void Player::OnCollision(GameObject * other, Collider * otherCol, Collider * myC
 {
 	if (other->getTag() == 1)
 	{		
-		other->DoDamage(this, 100);	
+		other->DoDamage(this, playerbodyDamage);	
 	}
 }
 

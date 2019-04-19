@@ -38,7 +38,7 @@ void Scene_Title::init()
 
 	ObjectPool::addGameObject(new Label( name, ttf, 24, 0xffffff, 250, 50, 0));	
 
-	ObjectPool::addGameObject(new Button_GameStart(1000, 350));
-	ObjectPool::addGameObject(new Button_Exit(1000, 400));
-	ObjectPool::addGameObject(new Button_Explain(1000, 450));
+	ObjectPool::addGameObject(new Button_Explain(1000, 350));
+	ObjectPool::addGameObject(new Button_GameStart(1000, 400));
+	ObjectPool::addGameObject(new Button_Exit(1000, 450));
 }

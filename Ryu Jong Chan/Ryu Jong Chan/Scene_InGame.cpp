@@ -18,7 +18,7 @@ Scene_InGame::~Scene_InGame()
 
 void Scene_InGame::init()
 {	
-	//사운드 출력
+	//기본 BGM 사운드 출력
 	ObjectPool::addGameObject(new Sound("asset/Sound/BGM.wav", true));
 	
 	ObjectPool::addGameObject(new Spawn(100, -150, 4));  

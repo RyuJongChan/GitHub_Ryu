@@ -11,7 +11,9 @@ private:
 	float fireRate;   
 	float fireTime;
 
-	int   hp;  
+	int   hp;  	
+
+	float playerbodyDamage;
 
 	//player 재소환 방지
 	int   only;

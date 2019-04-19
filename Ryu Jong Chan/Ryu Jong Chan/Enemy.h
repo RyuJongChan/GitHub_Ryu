@@ -13,6 +13,8 @@ private:
 
 	int hp;          
 
+	float enemybodyDamage;
+
 	float Temppx;	//초기 px임시 저장
 	bool isRight;
 

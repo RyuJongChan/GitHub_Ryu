@@ -22,7 +22,6 @@ void Collider::draw()
 
 void Collider::setOwnerPosition(float ownerpx, float ownerpy)
 {
-	//콜라이더를 가지고 있는 게임오브젝트를 기준으로..다시..위치를 지정함
 	px = px + ownerpx;
 	py = py + ownerpy;
 }

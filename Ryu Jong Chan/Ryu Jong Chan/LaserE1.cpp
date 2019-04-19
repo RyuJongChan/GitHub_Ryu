@@ -14,6 +14,7 @@ LaserE1::~LaserE1()
 
 void LaserE1::init()
 {
+	laserEDamage = 10.0f;
 	readDDS("asset/LaserE1.dds", &sprite);
 	speed = 300;
 	
@@ -36,7 +37,7 @@ void LaserE1::OnCollision(GameObject * other, Collider * otherCol, Collider * my
 {
 	if (strcmp(other->getName(), "player") == 0)
 	{				
-		other->DoDamage(this, 10);
+		other->DoDamage(this, laserEDamage);
 	}
 }
 

@@ -18,7 +18,7 @@ void Exp_Player::init()
 	{
 		for (int i = 0; i < 5; i++)
 		{
-			readDDSRect("asset/Expplayer.dds", i * 96, j * 96, 96, 96, &image);
+			readDDSRect("asset/expplayer.dds", i * 96, j * 96, 96, 96, &image);
 			addAniSprite(image);
 		}
 	}
